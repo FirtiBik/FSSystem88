@@ -12,16 +12,17 @@ echo "--------------------"
 read numb
 if [ $numb = "1" ]
 then
+	spymer
 	pkg install python
 	pkg install python3
 	pkg install python3-pip
 	pkg install dos2unix
 	pip3 install requests
 	pip3 install colorama
-	cp ~/spymer/spammer.py /data/data/com.termux/files/usr/bin/spymer
-	dos2unix /data/data/com.termux/files/usr/bin/spymer
-	chmod 777 /data/data/com.termux/files/usr/bin/spymer
-	spymer
+	cp ~/FSSystem88/spammer.py /data/data/com.termux/files/usr/bin/FSSystem88
+	dos2unix /data/data/com.termux/files/usr/bin/FSSystem88
+	chmod 777 /data/data/com.termux/files/usr/bin/FSSystem88
+	FSSystem88
 else
 	if [ $numb = "2" ]
 	then
@@ -33,9 +34,9 @@ else
 			apt install python3 python3-pip dos2unix
 			pip3 install requests
 			pip3 install colorama
-			cp ~/spymer/spammer.py /usr/bin/spymer
-			dos2unix /usr/bin/spymer
-			chmod 777 /usr/bin/spymer
+			cp ~/FSSystem88/spammer.py /usr/bin/FSSystem88
+			dos2unix /usr/bin/FSSystem88
+			chmod 777 /usr/bin/FSSystem88
 			spymer
 		fi
 	else
