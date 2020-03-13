@@ -12,7 +12,6 @@ echo "--------------------"
 read numb
 if [ $numb = "1" ]
 then
-	spymer
 	pkg install python
 	pkg install python3
 	pkg install python3-pip
@@ -37,7 +36,7 @@ else
 			cp ~/FSSystem88/spammer.py /usr/bin/FSSystem88
 			dos2unix /usr/bin/FSSystem88
 			chmod 777 /usr/bin/FSSystem88
-			spymer
+			FSSystem88
 		fi
 	else
 		if [ $numb = "3" ] 
@@ -47,10 +46,10 @@ else
 			apk add dos2unix
 			pip3 install requests
 			pip3 install colorama
-			cp ~/spymer/spammer.py /usr/bin/spymer
-			dos2unix /usr/bin/spymer
-			chmod 777 /usr/bin/spymer
-			spymer
+			cp ~/FSSystem88/spammer.py /usr/bin/FSSystem88
+			dos2unix /usr/bin/FSSystem88
+			chmod 777 /usr/bin/FSSystem88
+			FSSystem88
 		else
 			echo "Некорректный ввод"
 		fi
