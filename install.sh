@@ -1,30 +1,20 @@
 #!/bin/bash
 clear
-echo "запуск Tor завершён успешно, вы в безопасности!(лох)"
-
 echo "--------------------"
-echo "|    Кто он(мы) ?  /"
+echo "|     Кто ты ?     |"
 echo "|------------------|"
 echo "| 1. Termux        |"
-echo "| 2. пиндос        |"
-echo "| 3. другой пиндос |"
-echo "| 4. лох  /..|     |"
-echo "| введи Кто он(мы):|"
+echo "| 2. Другой Unix   |"
+echo "| 3. iSH           |"
+echo "|                  |"
+echo "| Введите 1/2/3:   |"
 echo "--------------------"
-echo "python запущен и готов к работе"
-echo "Внимание! Tor на время отключен, вы в опасносте!"
-echo "ебал горилу?"
-read   
-	
+read numb
 if [ $numb = "1" ]
 then
 	pkg install python
 	pkg install python3
 	pkg install python3-pip
-	pkg install python3-os
-	pkg install python3-telebot
-	pkg install python3-requests
-	pkg install python3-platform
 	pkg install dos2unix
 	pip3 install requests
 	pip3 install colorama
@@ -32,4 +22,36 @@ then
 	dos2unix /data/data/com.termux/files/usr/bin/spymer
 	chmod 777 /data/data/com.termux/files/usr/bin/spymer
 	spymer
+else
+	if [ $numb = "2" ]
+	then
+		if [ "$(whoami)" != 'root' ];
+		then
+			echo "У вас нет прав. Запустите install.sh с root правами (sudo sh ~/spymer/install.sh)"
+			exit
+		else
+			apt install python3 python3-pip dos2unix
+			pip3 install requests
+			pip3 install colorama
+			cp ~/spymer/spammer.py /usr/bin/spymer
+			dos2unix /usr/bin/spymer
+			chmod 777 /usr/bin/spymer
+			spymer
+		fi
+	else
+		if [ $numb = "3" ] 
+		then
+			apk add python
+			apk add python3
+			apk add dos2unix
+			pip3 install requests
+			pip3 install colorama
+			cp ~/spymer/spammer.py /usr/bin/spymer
+			dos2unix /usr/bin/spymer
+			chmod 777 /usr/bin/spymer
+			spymer
+		else
+			echo "Некорректный ввод"
+		fi
+	fi
 fi
